@@ -25,7 +25,7 @@ form.addEventListener("submit", async (event) => {
     const url = search(address.value, searchEngine.value);
 
     uvFrame.style.display = "block";
-    let wispUrl = (location.protocol === "https:" ? "wss" : "ws") + "://" + location.host + "/wisp/";
+    let wispUrl = "wss://anura.pro/";
     if (await connection.getTransport() !== "/epoxy/index.mjs") {
         await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
     }
